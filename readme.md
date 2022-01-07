@@ -40,7 +40,7 @@ npm を使って、request モジュールをインストールしてみます�
 $ npm i request
 ```
 インストールができたら download-request-node.js ファイルを作成してみます。
-```javascrit
+```javascript
 var request = require('request');
 var fs = require('fs');
 // ダウンロード元URL
