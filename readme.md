@@ -28,7 +28,29 @@ function webdownload(url, savepath, callback) {
 	});
 }
 ```
-以下のコマンドを実行
+以下のコマンドを実行するとダウンロードできます。
 ```bash
 $ node download-node.js
+```
+## request モジュールを使用してみる
+上記の様に関数を作成しなくても、便利なモジュールがありました。
+request モジュールです、これを使うと、より簡潔にダウンロード処理を記述する事ができます。
+npm を使って、request モジュールをインストールしてみます。
+```bash
+$ npm i request
+```
+インストールができたら download-request-node.js ファイルを作成してみます。
+```javascrit
+var request = require('request');
+var fs = require('fs');
+// ダウンロード元URL
+var url = "http://localhost/";
+// 保存先パス
+var savepath = "localhost.html";
+// ダウンロード
+request(url).pipe(fs.createWriteStream(savepath));
+```
+以下のコマンドを実行するとダウンロードできます。
+```bash
+$ node download-request-node.js
 ```

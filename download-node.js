@@ -5,7 +5,7 @@ webdownload(
 );
 
 /**
- * 
+ * ダウンロード関数
  * @param {String} url ダウンロード元URL
  * @param {String} savepath 保存先パス
  * @param {Function} callback ダウンロード完了後に実行する処理関数
