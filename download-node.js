@@ -1,7 +1,3 @@
-# Node.js WEBページをダウンロード
-以下プログラム download-node.js を作成して
-簡易的なダウンロードができます。
-```javascript
 // ダウンロード元URL
 var url = "http://localhost/";
 //保存先パス
@@ -19,8 +15,3 @@ http.get(url, function (res) {
 		console.log('OK');
 	})
 });
-```
-以下のコマンドを実行
-```bash
-$ node download-node.js
-```
